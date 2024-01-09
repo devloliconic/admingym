@@ -1,0 +1,28 @@
+.container {
+  padding: 20px;
+}
+
+.itemTitle {
+  font-size: 24px;
+  color: var(--black);
+  margin: 0;
+
+  font-weight: 500;
+}
+
+.itemValue {
+  font-size: 20px;
+  color: var(--gray-1);
+
+  font-weight: 500;
+}
+
+.equipment {
+  margin-top: 32px;
+}
+
+.equipmentBox {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+}

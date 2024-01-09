@@ -1,0 +1,25 @@
+.container {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px;
+
+  background-color: var(--navigation-background);
+  margin-bottom: 52px;
+}
+
+.title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--black);
+}
+
+.tableContainer {
+  padding: 0 20px;
+}
