@@ -55,14 +55,14 @@ export const useColumns = (handleEditClick: (id: number) => void) => {
           <DeleteOutlined
             style={{ cursor: "pointer" }}
             onClick={(e) => {
-              e.preventDefault();
+              e.stopPropagation();
               handleDeleteCoach(it.coach_id);
             }}
           />
           <EditOutlined
             style={{ cursor: "pointer" }}
             onClick={(e) => {
-              e.preventDefault();
+              e.stopPropagation();
               handleEditClick(it.coach_id);
             }}
           />

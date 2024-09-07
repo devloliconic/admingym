@@ -53,8 +53,9 @@ const CoachesPage = () => {
             pagination={false}
             onRow={(data) => {
               return {
-                onClick: () => {
+                onClick: (e) => {
                   navigate(`/coach/${data.coach_id}`);
+                  e.preventDefault();
                 }
               };
             }}

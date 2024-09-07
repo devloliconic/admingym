@@ -59,7 +59,7 @@ const GymsPage = () => {
                 }
               };
             }}
-            rowKey={(record) => record.gym_id + record.address_id}
+            rowKey={(record) => record.gym_id + record.name}
           />
         </div>
       </Loyout>

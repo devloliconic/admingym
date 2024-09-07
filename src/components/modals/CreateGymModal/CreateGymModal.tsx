@@ -4,10 +4,10 @@ import { useEffect, useMemo } from "react";
 import { Controller, useForm } from "react-hook-form";
 
 import { useCreateGym } from "@/api/mutations/createGym";
+import { useUpdateGym } from "@/api/mutations/updateGym";
 import { useGym } from "@/api/queries/gym";
 
 import styles from "./createGymModal.module.scss";
-import { useUpdateGym } from "@/api/mutations/updateGym";
 
 interface Props {
   isOpen: boolean;
@@ -63,7 +63,7 @@ export const CreateGymModal = ({ isOpen, onModalClose, gymId }: Props) => {
         {
           onSuccess: () => {
             queryClient.invalidateQueries(["gyms"]);
-            queryClient.invalidateQueries(["gym", gymId]);
+            queryClient.invalidateQueries(["gym", String(gymId)]);
             onModalClose();
             reset();
           }
@@ -76,6 +76,7 @@ export const CreateGymModal = ({ isOpen, onModalClose, gymId }: Props) => {
       {
         onSuccess: () => {
           queryClient.invalidateQueries(["gyms"]);
+          queryClient.invalidateQueries(["gym", String(gymId)]);
           onModalClose();
           reset();
         }

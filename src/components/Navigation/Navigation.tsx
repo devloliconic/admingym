@@ -45,7 +45,7 @@ export const Navigation = () => {
       getMenuItem("👨Клиенты", "/clients"),
       getMenuItem("📃Абонементы", "/tickets"),
       getMenuItem("🥋Тренера", "/coaches"),
-      getMenuItem("🤼Трировки", "/workouts")
+      getMenuItem("🤼Тренировки", "/workouts")
     ],
     []
   );
@@ -56,7 +56,7 @@ export const Navigation = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.logo}>🔥💪🏼Gym Maneger</div>
+      <div className={styles.logo}>🔥💪🏼Gym Manager</div>
       <Menu
         items={items}
         className={styles.menu}
